@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Empresa</title>
+  <link rel="stylesheet" href="style-empresa.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastre sua empresa</h1>
+    <form class="form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+ 
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+ 
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+ 
+      <div class="inline-fields">
+        <div class="field">
+          <label for="cnpj">CNPJ:</label>
+          <input type="text" id="cnpj" name="cnpj" required />
+        </div>
+ 
+        <div class="field">
+          <label for="telefone">Telefone:</label>
+          <input type="text" id="telefone" name="telefone" required />
+        </div>
+      </div>
+ 
+      <div class="form-footer">
+        <button type="submit">Cadastrar sua empresa</button>
+        <div class="next-link">
+          <a href="#">Não é uma empresa?</a>
+          <a href="./cadastro-cliente1.html"
+          class="botao-link">Próximo</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

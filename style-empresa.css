@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #36669a; /* Azul de fundo */
+  font-family: Arial, sans-serif;
+}
+ 
+.container {
+  background-color: #ddd;
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  margin: 80px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ 
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  background: #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+ 
+.form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+ 
+.inline-fields {
+  display: flex;
+  gap: 40px; /* Espaço entre os campos CNPJ e Telefone */
+  flex-wrap: wrap;
+}
+ 
+.inline-fields input {
+  width: 100%;
+}
+ 
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+ 
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre os blocos da área do rodapé */
+}
+ 
+.form-footer button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.next-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+ 
+.next-link a {
+  font-size: 12px;
+  color: #28a745;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+ 
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+ .botao-link {
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black !important;
+  text-align: center;
+}
