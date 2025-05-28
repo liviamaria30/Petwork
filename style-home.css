@@ -13,16 +13,18 @@ body {
   }
    
   .top-bar input[type="text"] {
+    flex:1;
+    max-width:300px;
     padding: 8px;
-    border-radius: 20px;
-    border: none;
-    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc
   }
    
-  .top-bar h1 {
-    margin: 10px 0 5px;
-    font-size: 24px;
+  .top-bar h1 ,
+  .top-bar .slogan{
+    margin: o;
   }
+  
    
   .slogan {
     font-size: 12px;

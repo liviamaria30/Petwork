@@ -1,0 +1,54 @@
+/* Menu lateral fixo */
+.menu-lateral {
+  position: fixed;
+  top: 70px; /* Espaço abaixo do botão */
+  right: 20px;
+  width: 220px; /* Largura do quadradinho */
+  background: linear-gradient(to bottom, #3c68a0, #333);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #3c68a0(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: none; /* Começa oculto */
+}
+ 
+.menu-lateral.ativo {
+  display: block;
+}
+ 
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  background-color: #3c68a0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+ 
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.menu-lateral ul li {
+  margin: 10px 0;
+}
+ 
+.menu-lateral ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: 0.2s;
+}
+ 
+.menu-lateral ul li a:hover {
+  color: #9fd1ff;
+}
+ 

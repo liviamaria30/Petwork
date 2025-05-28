@@ -12,6 +12,8 @@ document.getElementById('formCadastroEmpresa').addEventListener('submit', functi
   console.log('Empresa cadastrada com sucesso:', { nome, cnpj });
  
   // Redireciona para a página inicial
-  window.location.href = 'home.html';
+ 
+   window.location.href = 'home.html';
 });
+ 
  
