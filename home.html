@@ -28,8 +28,19 @@
       <div class="icons">
         <img src="img/seetings.png" alt="Ícone personalizado" style="width: 24px; height: 24px; border-radius: 50%;">
         <img src="img/sino.png" alt="Ícone personalizado" style="width: 28px; height: 30px; border-radius: 50%;">
-        <img src="img/m" alt="Ícone personalizado" style="width: 28px; height: 30px; border-radius: 50%;">
+        <!--era pra ser o icone de menu aqui mas ainda nao sei-->
       </div>      
+
+      <!-- MENU FLUTUANTE -->
+<div class="menu-flutuante" id="menuFlutuante">
+  <ul>
+    <li><a href="#">Minha Conta</a></li>
+    <li><a href="#">Avaliações</a></li>
+    <li><a href="#">Sobre Nós</a></li>
+    <li><a href="#"><img src="img/sair.png" alt="Sair" class="icon-sair"> Sair</a></li>
+  </ul>
+</div>
+
     </div>
   </header>
  
@@ -121,10 +132,11 @@
   </div>
 </section>
 <script>
-  function toggleMenu() {
-    document.getElementById("menuLateral").classList.toggle("ativo");
-  }
+    function toggleMenu() {
+        const menu = document.getElementById("menuFlutuante");
+        menu.classList.toggle("ativo");
+    }
 </script>
+
 </body>
 </html>
- 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós - Petwork</title>
+  <link rel="stylesheet" href="style-sobre.css">
+</head>
+<body>
+ 
+  <!-- TOPO -->
+  <header>
+    <div class="top-bar">
+      <div class="right-icons">
+        <img src="img/seetings.png" alt="Configurações">
+        <img src="img/sino.png" alt="Notificações">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+      <div class="center-text">
+        <h1>Petwork</h1>
+        <p class="slogan">"Conectando para cuidar melhor de quem você ama"</p>
+      </div>
+    </div>
+  </header>
+ 
+  <!-- MENU FLUTUANTE -->
+  <div class="menu-flutuante" id="menuFlutuante">
+    <ul>
+      <li><a href="#">Minha Conta</a></li>
+      <li><a href="#">Avaliações</a></li>
+      <li><a href="#">Sobre Nós</a></li>
+      <li><a href="#"><img src="img/sair.png" alt="Sair" class="icon-sair">Sair</a></li>
+    </ul>
+  </div>
+ 
+  <!-- CONTEÚDO -->
+  <main>
+    <section class="sobre-nos">
+      <h2>Sobre nós</h2>
+      <p>
+        A Pet Hub surgiu com o propósito de inovar no mercado pet, unindo tecnologia, empreendedorismo e paixão pela causa animal.
+      </p>
+      <p>
+        Somos estudantes de Informática da ETEC Adolpho Berezin, comprometidos em transformar ideias em soluções que conectam pessoas, serviços e amor pelos pets.
+      </p>
+      <img src="img/logo.png" alt="Logo Pet Hub" class="logo">
+    </section>
+  </main>
+ 
+  <!-- SCRIPT DO MENU -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuFlutuante");
+      menu.classList.toggle("ativo");
+    }
+  </script>
+ 
+</body>
+</html>

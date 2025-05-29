@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Histórico de Avaliações | PetWork</title>
+  <link rel="stylesheet" href="style-avaliacoes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="topo">
+    <h2>Histórico</h2>
+    <div class="icones-topo">
+      <i class="fas fa-cog" title="Configurações"></i>
+      <i class="fas fa-bell" title="Notificações" id="sininho"></i>
+      <i class="fas fa-bars" title="Menu"></i>
+    </div>
+    <div id="notificacaoPopup" style="display:none;">
+      <h4>Notificações</h4>
+      <hr>
+      <button>Marcar tudo como lido</button>
+    </div>
+  </div>
+ 
+  <div class="container">
+    <div class="pesquisar">
+      <input type="text" placeholder="Pesquisar avaliações">
+    </div>
+    <div class="lista-avaliacoes">
+      <div class="info">
+        <div class="avaliacao">
+          <strong>Pet Shop do João</strong><br>
+          Ótimo atendimento! Recomendo.
+        </div>
+        <div class="avaliacao">
+          <strong>Clínica Vet Vida</strong><br>
+          Médica muito atenciosa e carinhosa.
+        </div>
+        <div class="avaliacao">
+          <strong>Banho & Tosa Bichinhos</strong><br>
+          Meu pet saiu limpinho e cheiroso!
+        </div>
+      </div>
+      <div class="fotos">
+        <div class="foto"><img src="img/perfil.jpg" alt="Foto de Perfil"></div>
+        <div class="foto"><img src="img/perfil.jpg" alt="Foto de Perfil"></div>
+        <div class="foto"><img src="img/perfil.jpg" alt="Foto de Perfil"></div>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    const sininho = document.getElementById('sininho');
+    const popup = document.getElementById('notificacaoPopup');
+ 
+    sininho.addEventListener('click', () => {
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    });
+ 
+    document.addEventListener('click', function(e) {
+      if (!sininho.contains(e.target) && !popup.contains(e.target)) {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
+ 

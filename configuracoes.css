@@ -1,0 +1,151 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+ 
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+ 
+/* Container geral */
+.config-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+ 
+/* Menu lateral */
+.config-menu {
+  width: 220px;
+  background-color: #eef3f7;
+  padding: 20px 0;
+  border-right: 2px solid #d0dbe5;
+}
+ 
+.config-menu ul {
+  list-style: none;
+}
+ 
+.config-menu li {
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+ 
+.config-menu li:hover {
+  background-color: #d0e7ff;
+}
+ 
+.config-menu li.active {
+  background-color: #4f9cf9;
+  color: white;
+  font-weight: bold;
+}
+ 
+/* Conteúdo das configurações */
+.config-content {
+  flex: 1;
+  padding: 30px;
+}
+ 
+/* Seções */
+.config-section {
+  animation: fadeIn 0.3s ease-in-out;
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ 
+/* Perfil */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ 
+.photo-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+ 
+.photo-name img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4f9cf9;
+}
+ 
+.profile-info select,
+.profile-info input[type="text"],
+.profile-info button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+ 
+.profile-info label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+ 
+/* Botão de editar */
+.profile-info button {
+  background: #4f9cf9;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+ 
+.profile-info button:hover {
+  background: #3178d6;
+}
+ 
+/* Seções de Notificações e Acessibilidade */
+.config-section h2 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #333;
+}
+ 
+.config-section p {
+  margin-bottom: 12px;
+  color: #666;
+}
+ 
+.config-section h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: 600;
+}
+ 
+.config-section label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+ 
+.config-section input[type="checkbox"],
+.config-section input[type="radio"] {
+  margin-right: 8px;
+}
+ 
