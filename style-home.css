@@ -20,11 +20,14 @@ header {
     border: 1px solid #ccc;
 }
  
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* CENTRALIZA */
-  text-align: center; /* alinha o texto ao centro */
+.top-bar h1,
+.top-bar .slogan {
+    margin: 0;
+}
+ 
+.slogan {
+    font-size: 12px;
+    margin: 0;
 }
  
 .icons {
@@ -104,7 +107,7 @@ main {
     margin: 0;
     color: #444;
 }
-
+ 
 .info-final {
     background-color: #3c68a0;
     color: white;
@@ -151,39 +154,37 @@ main {
 .contato-final p {
     margin: 5px 0;
 }
-
+ 
 /* TOPO */
 header {
     background-color: #3c68a0;
     color: white;
     padding: 15px 20px;
 }
-
+ 
 .top-bar {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 10px 20px;
+    justify-content: center;
 }
-
+ 
 .top-bar h1 {
     margin: 0;
     font-size: 28px;
     text-align: center;
 }
-
+ 
 .top-bar .slogan {
     margin: 0;
     font-size: 12px;
     text-align: center;
 }
-
+ 
 /* Linha da busca e ícones */
 .search-icons {
   display: flex;
-  justify-content: flex start; 
+  justify-content: flex start;
   align-items: center;
   width: 100%;
   margin-top: 10px;
@@ -197,7 +198,7 @@ header {
   max-width: 300px;
   text-align: left;
 }
-
+ 
 /* Ícones à direita */
 .icons {
     display: flex;
@@ -205,13 +206,13 @@ header {
     align-items: center;
     margin-right: 15px;
 }
-
+ 
 .icons img {
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
-
+ 
 .menu-toggle {
     background-color: transparent;
     border: none;
@@ -219,7 +220,7 @@ header {
     font-size: 24px;
     cursor: pointer;
 }
-
+ 
 /* MENU FLUTUANTE */
 .menu-flutuante {
     position: absolute;
@@ -233,24 +234,24 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
 }
-
+ 
 .menu-flutuante.ativo {
     display: block;
 }
-
+ 
 .menu-flutuante ul {
     list-style: none;
     padding: 0;
 }
-
+ 
 .menu-flutuante li {
     margin-bottom: 12px;
 }
-
+ 
 .menu-flutuante li:last-child {
     margin-bottom: 0;
 }
-
+ 
 .menu-flutuante a {
     text-decoration: none;
     color: black;
@@ -262,159 +263,13 @@ header {
     transition: background-color 0.3s;
     font-weight: 500;
 }
-
+ 
 .menu-flutuante a:hover {
     background-color: #ddd;
 }
-
+ 
 .icon-sair {
     width: 14px;
     vertical-align: middle;
     margin-right: 4px;
-}
-
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 10px;
-  z-index: 0;
-}
- 
-.top-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-  padding: 50px 20px 10px 20px; /* adiciona espaço pro conteúdo centralizado */
-}
- 
-.text-container {
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.top-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ÍCONES DO TOPO */
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-  padding: 10px 20px;
-}
- 
-.icon-notificacao,
-.icon-configuracao {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  cursor: pointer;
-}
- 
-.menu-toggle {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-}
-
-/* MENU AZUL FLUTUANTE - HOME */
- 
-/* Container geral do menu flutuante */
-.menu-flutuante-container {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-family: 'Segoe UI', sans-serif;
-}
- 
-/* Card azul de fundo */
-.menu-flutuante-fundo {
-  background-color: #1e3a8a; /* azul escuro */
-  border-radius: 16px;
-  padding: 20px;
-  width: 220px;
-  box-shadow: 0 8px 16px rgba(30, 58, 138, 0.3);
-  position: relative;
-  z-index: 1;
-}
- 
-/* Card branco flutuante sobre o azul */
-.menu-flutuante-superior {
-  background-color: white;
-  border-radius: 16px;
-  padding: 20px;
-  width: 200px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  position: relative;
-  top: -150px; /* sobe sobre o azul */
-  left: 10px; /* desloca um pouco para direita */
-  z-index: 2;
-}
- 
-/* Lista de opções dentro do card branco */
-.menu-flutuante-superior ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
- 
-/* Cada item do menu */
-.menu-flutuante-superior ul li {
-  padding: 12px 0;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-  font-weight: 600;
-  color: #1e3a8a; /* texto azul escuro */
-  transition: background-color 0.2s ease;
-}
- 
-/* Último item sem borda */
-.menu-flutuante-superior ul li:last-child {
-  border-bottom: none;
-}
- 
-/* Hover do item */
-.menu-flutuante-superior ul li:hover {
-  background-color: #f0f4ff;
-  color: #0f204c;
-  border-radius: 8px;
-}
- 
-/* Centralizar o texto */
-.menu-flutuante-superior ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-/* Título no card azul */
-.menu-flutuante-fundo h3 {
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-  user-select: none;
-  letter-spacing: 1.2px;
 }
