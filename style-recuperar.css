@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    background-color: #2f65a7;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 24px;
+    text-align: left;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.card h2 {
+    color: #2f65a7;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input:focus {
+    border: 2px solid #2f65a7;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2f65a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #004d99;
+}
+
+a.voltar {
+    background-color: white;
+    color: #2f65a7;
+    border: 2px solid #2f65a7;
+    padding: 9px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a.voltar:hover {
+    background-color: #2f65a7;
+    color: white;
+}

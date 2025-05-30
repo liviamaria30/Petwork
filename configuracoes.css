@@ -6,40 +6,57 @@
   font-family: 'Segoe UI', sans-serif;
 }
  
-body {
+html, body {
+  height: 100%;
   background-color: #f9f9f9;
   color: #333;
-  padding: 20px;
 }
  
-/* Container geral */
-.config-container {
+/* Agora fullscreen */
+body {
   display: flex;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
  
-/* Menu lateral */
+.config-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  border-radius: 0; /* Sem arredondar na fullscreen */
+  box-shadow: none; /* Sem sombra na fullscreen */
+  overflow: hidden;
+}
+ 
+/* Menu lateral fixo */
 .config-menu {
-  width: 220px;
+  width: 250px;
   background-color: #eef3f7;
-  padding: 20px 0;
+  padding: 30px 0;
   border-right: 2px solid #d0dbe5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
  
 .config-menu ul {
   list-style: none;
+  width: 100%;
+  padding-left: 0;
 }
  
 .config-menu li {
-  padding: 16px 24px;
+  padding: 18px 32px;
   cursor: pointer;
   transition: background 0.2s;
   font-weight: 500;
+  user-select: none;
 }
  
 .config-menu li:hover {
@@ -52,10 +69,11 @@ body {
   font-weight: bold;
 }
  
-/* Conteúdo das configurações */
+/* Conteúdo das configurações ocupa o resto da tela */
 .config-content {
   flex: 1;
-  padding: 30px;
+  padding: 40px 50px;
+  overflow-y: auto; /* Scroll interno se necessário */
 }
  
 /* Seções */
@@ -64,8 +82,14 @@ body {
 }
  
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
  
 /* Perfil */
@@ -90,7 +114,7 @@ body {
 }
  
 .profile-info select,
-.profile-info input[type="text"],
+.profile-info input[type='text'],
 .profile-info button {
   padding: 8px;
   border: 1px solid #ccc;
@@ -144,8 +168,7 @@ body {
   cursor: pointer;
 }
  
-.config-section input[type="checkbox"],
-.config-section input[type="radio"] {
-  margin-right: 8px;
+.config-section input[type='checkbox'],
+.config-section input[type='radio'] {
+margin-right: 8px;
 }
- 

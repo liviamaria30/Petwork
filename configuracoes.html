@@ -1,77 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Configurações</title>
-  <link rel="stylesheet" href="configuracoes.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Configurações</title>
+<link rel="stylesheet" href="configuracoes.css" />
 </head>
 <body>
   <div class="config-container">
     <aside class="config-menu">
       <ul>
-        <li class="active" onclick="mostrarSecao('perfil')">Seu perfil</li>
-        <li onclick="mostrarSecao('notificacoes')">Notificações</li>
-        <li onclick="mostrarSecao('acessibilidade')">Acessibilidade</li>
+        <li class="active" onclick="mostrarSecao('perfil', event)">Seu perfil</li>
+        <li onclick="mostrarSecao('notificacoes', event)">Notificações</li>
+        <li onclick="mostrarSecao('acessibilidade', event)">Acessibilidade</li>
       </ul>
     </aside>
- 
     <section class="config-content">
       <!-- SEÇÃO PERFIL -->
       <div class="config-section" id="perfil">
         <h2>Seu perfil</h2>
         <div class="profile-info">
           <div class="photo-name">
-            <img src="img/icone.png" alt="Foto de perfil">
+            <img src="img/icone.png" alt="Foto de perfil" />
             <div>
               <p><strong>Nome</strong></p>
               <p>Melissa Martins <button>✏️</button></p>
             </div>
           </div>
-          <p><strong>Endereço de e-mail</strong><br>melmartins@gmail.com</p>
- 
+          <p><strong>Endereço de e-mail</strong><br />melmartins@gmail.com</p>
           <label>Qual seu tipo de perfil?</label>
           <select>
             <option>Cliente</option>
             <option>Comerciante</option>
           </select>
- 
           <label>Idioma</label>
           <select>
             <option>Português (Brasil)</option>
           </select>
         </div>
       </div>
- 
       <!-- SEÇÃO NOTIFICAÇÕES -->
       <div class="config-section" id="notificacoes" style="display:none;">
         <h2>Notificações</h2>
         <p>Escolha como e quando deseja receber notificações da plataforma</p>
         <h4>Receber notificações por:</h4>
-        <label><input type="checkbox"> E-mail</label><br>
-        <label><input type="checkbox"> Push (Navegador/App)</label><br>
-        <label><input type="checkbox"> Notificações internas</label>
- 
+        <label><input type="checkbox" /> E-mail</label><br />
+        <label><input type="checkbox" /> Push (Navegador/App)</label><br />
+        <label><input type="checkbox" /> Notificações internas</label>
         <h4>Preferências avançadas</h4>
-        <label><input type="radio" name="frequencia" checked> Imediatamente</label><br>
-        <label><input type="radio" name="frequencia"> Silenciar notificações</label>
+        <label><input type="radio" name="frequencia" checked /> Imediatamente</label><br />
+        <label><input type="radio" name="frequencia" /> Silenciar notificações</label>
       </div>
- 
       <!-- SEÇÃO ACESSIBILIDADE -->
       <div class="config-section" id="acessibilidade" style="display:none;">
         <h2>Acessibilidade</h2>
         <p>Escolha como você gostaria de visualizar o Petwork.</p>
         <h4>Escolha um tema</h4>
-        <label><input type="radio" name="tema" checked> Automático (sistema)</label><br>
-        <label><input type="radio" name="tema"> Claro</label><br>
-        <label><input type="radio" name="tema"> Escuro</label>
+        <label><input type="radio" name="tema" checked /> Automático (sistema)</label><br />
+        <label><input type="radio" name="tema" /> Claro</label><br />
+        <label><input type="radio" name="tema" /> Escuro</label>
       </div>
     </section>
   </div>
  
   <script>
-    function mostrarSecao(secaoId) {
+    function mostrarSecao(secaoId, event) {
       const secoes = document.querySelectorAll('.config-section');
-      secoes.forEach(secao => secao.style.display = 'none');
+secoes.forEach(secao => (secao.style.display = 'none'));
       document.getElementById(secaoId).style.display = 'block';
  
       const itensMenu = document.querySelectorAll('.config-menu li');
@@ -81,4 +76,3 @@
   </script>
 </body>
 </html>
- 
